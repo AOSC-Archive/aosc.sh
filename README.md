@@ -42,7 +42,8 @@ into your code where needed or in other similar methods.
 ```
 
 If you want to include parts of the script, or 'statically-link' the library,
-please add markers like `##BEGIN GPL2+/LE SOURCE github.com/AOSC-Dev/aosc.sh`
-and `##END aosc.sh` to your sourced areas. If you are only including a few
-functions, add markers like `##GPL2+/LE SOURCE github.com/AOSC-Dev/aosc.sh`
-above the `func() {` line.
+in your non-GPL script, add markers like
+`##BEGIN GPL2+/LE SOURCE github.com/AOSC-Dev/aosc.sh` and `##END aosc.sh`
+around to your sourced areas. If you are only including a few functions,
+add markers like `##GPL2+/LE SOURCE github.com/AOSC-Dev/aosc.sh`above the
+`func() {` line.
