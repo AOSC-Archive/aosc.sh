@@ -40,3 +40,9 @@ into your code where needed or in other similar methods.
 # of the library, but you are not obligated to do so. If you do not wish to
 # do so, delete this exception statement from your version.
 ```
+
+If you want to include parts of the script, or 'statically-link' the library,
+please add markers like `##BEGIN GPL2+/LE SOURCE github.com/AOSC-Dev/aosc.sh`
+and `##END aosc.sh` to your sourced areas. If you are only including a few
+functions, add markers like `##GPL2+/LE SOURCE github.com/AOSC-Dev/aosc.sh`
+above the `func() {` line.
