@@ -9,11 +9,12 @@ shopt -s expand_aliases extglob
 AOSCLIBS="|base|" # GLOBAL: AOSCLIBS='|base[|lib1|lib2]|'
 # Should these information be redirected into aosc__log()?
 # new ref impl: https://github.com/Arthur2e5/MobileConstructionVehicle/blob/master/common.sh
+# Verbosity control needed! Refactor me please!
 ##Prints a warning message.
-aosc_logw(){ echo -e "[\e[33mWARN\e[0m]: \e[1m$*\e[0m" >&2; }
-aosc_loge(){ echo -e "[\e[31mERROR\e[0m]: \e[1m$*\e[0m" >&2; }
-aosc_logi(){ echo -e "[\e[96mINFO\e[0m]: \e[1m$*\e[0m" >&2; }
-aosc_logd(){ echo -e "[\e[32mDEBUG\e[0m]:\e[1m$*\e[0m" >&2; }
+aosc_logw(){ printf %b "\e[33mW\e[0m\t$*\n" >&2; }
+aosc_loge(){ printf %b "\e[31mE\e[0m\t$*\n" >&2; }
+aosc_logi(){ printf %b "\e[96mI\e[0m\t$*\n" >&2; }
+aosc_logd(){ printf %b "\e[32mD\e[0m\t$*\n" >&2; }
 
 ##Sources all args.
 aosc__recursive_source(){
